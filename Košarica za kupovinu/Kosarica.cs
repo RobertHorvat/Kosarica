@@ -65,6 +65,7 @@ namespace Košarica_za_kupovinu
             if (Zakljucana() == false)
             {
                 stavke.Add(stavka);
+                status = Status_kosarice.Aktivna;
             }
             else
                 Console.WriteLine("Kosarica zakljucana!!");

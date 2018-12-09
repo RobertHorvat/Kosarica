@@ -16,11 +16,11 @@ namespace Košarica_za_kupovinu
 
             List<Stavka_kosarice> kosarica = k.VratiStavke();
             for (int x = 0; x < kosarica.Count; x++)
-                Console.WriteLine("{0}.\t{1}", x + 1, kosarica[x].ToString());
+                Console.WriteLine("{0}.\t{1}", x + 1, kosarica[x]);
 
             Console.WriteLine("*********************************************************************************");
             Console.WriteLine("Ukupno za platiti: {0}", k.VratiVrijednost());
-            Console.WriteLine("Status: {0}\n\n", k.VratiStatus().ToString());
+            Console.WriteLine("Status: {0}\n\n", k.VratiStatus());
         }
 
         static void Main(string[] args)
@@ -33,7 +33,7 @@ namespace Košarica_za_kupovinu
             
 
 
-            k.DodajStavku("Napolitanke Kras", 1, 25.99);
+            k.DodajStavku("Napolitanke", 1, 25.99);
             k.DodajStavku("Luk rinfuza", 2, 5.99);
             k.DodajStavku("Pen korektor", 2,13.99);
             k.DodajStavku(f);
@@ -44,14 +44,15 @@ namespace Košarica_za_kupovinu
             k.VratiVlasnika().Promijeni_Adresu("Kralja Tomislava 5,Čakovec");
 
             k.Storniraj();
+            Ispisi_Kosaricu(k);
 
-            
 
-            
 
-           
 
-           
+
+
+
+
 
             Console.ReadLine();
 

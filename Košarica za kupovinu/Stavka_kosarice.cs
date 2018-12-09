@@ -47,7 +47,7 @@ namespace Košarica_za_kupovinu
 
         public override string ToString()
         {
-            return base.ToString();
+            return opis + "\t\t" + kolicina.ToString() + "\t" + Vrati_Cijenu().ToString() + "\t" + Vrati_Vrijednost().ToString();
         }
 
 

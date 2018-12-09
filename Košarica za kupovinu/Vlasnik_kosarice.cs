@@ -47,7 +47,7 @@ namespace Košarica_za_kupovinu
 
         public override string ToString()
         {
-            return base.ToString();
+            return id + "\t" + naziv + "\t" + adresa;
         }
     }
 }
