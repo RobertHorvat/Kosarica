@@ -42,6 +42,7 @@ namespace Košarica_za_kupovinu
             Ispisi_Kosaricu(k);
 
             k.VratiVlasnika().Promijeni_Adresu("Kralja Tomislava 5,Čakovec");
+            k.ObrisiStavku(2);
 
             k.Storniraj();
             Ispisi_Kosaricu(k);

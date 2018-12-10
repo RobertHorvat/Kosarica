@@ -87,7 +87,7 @@ namespace Košarica_za_kupovinu
         {
             if(Zakljucana()==false)
             {
-                stavke.RemoveAt(index);
+                stavke.RemoveAt(index-1);
             }
         }
 
