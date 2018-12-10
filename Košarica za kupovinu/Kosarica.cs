@@ -16,6 +16,8 @@ namespace Košarica_za_kupovinu
         public Kosarica(Vlasnik_kosarice vlasnik)
         {
             this.vlasnik = vlasnik;
+            id = Guid.NewGuid();
+            status = Status_kosarice.Prazna;
         }
 
         private bool Zakljucana()
@@ -101,10 +103,11 @@ namespace Košarica_za_kupovinu
 
         public void Isprazni()
         {
-            foreach(Stavka_kosarice stavka in stavke)
-            {
-                stavke.Remove(stavka);
-            }
+            //foreach(Stavka_kosarice stavka in stavke)
+            //{
+            //    stavke.Remove(stavka);
+            //}
+            stavke.Clear();
         }
 
         public void Plati()
